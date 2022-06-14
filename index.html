@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitiBike Usage Maps</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Inter:wght@300;400;700;800;&family=Open+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/01d9812a13.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="article-style.css">
+</head>
+<body>
+    <div class="menu">
+        <a href="https://srjouppi.github.io/points-unknown-coursework"> <-- Back </a>
+    </div>
+    <div class="text-container">
+        <h1>Interactive maps: CitiBike Usage</h1>
+        <h2>Using Javascript, Mapbox and Geopandas, I created four interactive maps of Citibike Usage comparing September 2020 to September 2021.</h2>
+        <p class="dateline" style="color:grey;">June 13, 2022</p>
+        <p>CitiBike is expanding its into Brooklyn and the Bronx. Below are two sets of maps comparing the number of starts and stops per CitiBike station between September 2020 and September 2021.</p>
+         <p><em>Data wrangling and sources in <a href="https://colab.research.google.com/drive/1Nc18eEznDM_Rd7mhMrtFYaVSTyynsO1d?usp=sharing" target="_blank">this Google Colab notebook.</a>
+         </em></p>
+    </div>
+    <div class="row-container">  
+        <div class="float-child-left">
+            <h3><strong>September <span style="color:#05c4d2;">2020</span></strong></h3>
+            <h2>Starts per station</h2>
+            <div id='mapStarts20'></div>
+        </div>
+        <div class="float-child-right"> 
+            <h3><strong>September <span style="color:#ce03c1;">2021</strong></strong></h3>
+            <h2>Starts per station</h2>
+            <div id='mapStarts21'></div>
+        </div>
+    </div>
+    </div>
+    <div class="row-container">
+        <div class="float-child-left">
+            <h3><strong>September <span style="color:#05c4d2;">2020</span></strong></h3>
+            <h2>Stops per station</h2>
+            <div id="mapStops20"></div>
+        </div>
+        <div class="float-child-right">
+            <h3><strong>September <span style="color:#ce03c1;">2021</strong></span></h3>
+            <h2>Stops per station</h2>
+            <div id="mapStops21"></div>
+        </div>
+    </div>
+    
+
+    <script type='text/javascript' src="map2.js"></script>
+</body>
+</html>
